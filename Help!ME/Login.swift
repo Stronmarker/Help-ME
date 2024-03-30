@@ -2,14 +2,16 @@
 //  Home.swift
 //  App
 //
-//  Created by Alexandre Andres-Robert on 29/03/2024.
+//  Created by Alexandre Andres-Robert & Gaetan Finiels on 29/03/2024.
 //
 
 import SwiftUI
 import AuthenticationServices
 import FirebaseAuth
 
-struct Home: View {
+struct Login: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     @State private var emailUser = ""
     @State private var passwordUser = ""
     @State private var isLoggedIn: Bool = false
@@ -30,7 +32,7 @@ struct Home: View {
                     .bold()
                     .padding()
                 Text("Le réseau social où les parents sont contents de voir les enfants")
-                    .font(.subheadline)
+                    .font(.footnote)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .italic()
@@ -79,19 +81,13 @@ struct Home: View {
                     
                     
                     SignInWithAppleButton(.continue) { request in
-                        
                         request.requestedScopes = [.email, .fullName]
-                        
                     } onCompletion: { result in
-                        
                         switch result {
                         case .success(let auth):
-                            
                             switch auth.credential {
                             case let credential as ASAuthorizationAppleIDCredential:
-                                
                                 let userId = credential.user
-                                
                                 let email = credential.email
                                 let firstName = credential.fullName?.givenName
                                 let lastName = credential.fullName?.familyName
@@ -101,44 +97,39 @@ struct Home: View {
                                 self.firstName = firstName ?? ""
                                 self.lastName = lastName ?? ""
                                 
+                                isLoggedIn = true
                             default:
                                 break
                             }
-                            
-                            
+                            break
                         case .failure(let error):
                             print(error)
                         }
                         
                     }
-                    .padding(.vertical)
-                    .frame(maxWidth: .infinity, maxHeight: 90)
-                    .cornerRadius(10)
-                    .padding(.horizontal)
+                    .signInWithAppleButtonStyle(
+                        colorScheme == .dark ? .white : .black
+                    )
+                    .frame(height: 50)
+                    .padding()
+                    .cornerRadius(8)
+                    
+                    Spacer()
                 }
-                .padding()
-                .background(Color.black.opacity(0.2))
-                .cornerRadius(10)
-                .padding()
                 
-                Spacer()
+                
+                .fullScreenCover(isPresented: $isLoggedIn) {
+                    abcd()
+                }
+                
             }
-            
-            .fullScreenCover(isPresented: $isLoggedIn) {
-                abcd() // Assurez-vous que cette vue existe dans votre projet
-            }
-            
             .background(LinearGradient(gradient: Gradient(colors: [Color.black, Color.gray]), startPoint: .top, endPoint: .bottom))
         }
     }
 }
     
-    
-    #Preview {
-        Home()
-    }
 
+#Preview {
+    Login()
+}
 
-
-
-          

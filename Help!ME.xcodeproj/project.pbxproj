@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		FAEBCF432BB6C21F00F737F0 /* Help_MEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBCF422BB6C21F00F737F0 /* Help_MEApp.swift */; };
-		FAEBCF452BB6C21F00F737F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBCF442BB6C21F00F737F0 /* ContentView.swift */; };
 		FAEBCF472BB6C22000F737F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEBCF462BB6C22000F737F0 /* Assets.xcassets */; };
 		FAEBCF4A2BB6C22000F737F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEBCF492BB6C22000F737F0 /* Preview Assets.xcassets */; };
 		FAEBCF532BB6C3A100F737F0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FAEBCF522BB6C3A100F737F0 /* FirebaseAuth */; };
 		FAEBCF572BB6C95700F737F0 /* Homel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBCF562BB6C95700F737F0 /* Homel.swift */; };
-		FAEBCF592BB6EACB00F737F0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBCF582BB6EACB00F737F0 /* SwiftUIView.swift */; };
+		FAEBCF5B2BB6FED500F737F0 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBCF5A2BB6FED500F737F0 /* Login.swift */; };
+		FAEBCF5D2BB7085F00F737F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAEBCF5C2BB7085F00F737F0 /* GoogleService-Info.plist */; };
+		FAEBCF632BB8344200F737F0 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBCF622BB8344200F737F0 /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAEBCF3F2BB6C21F00F737F0 /* Help!ME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Help!ME.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEBCF422BB6C21F00F737F0 /* Help_MEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help_MEApp.swift; sourceTree = "<group>"; };
-		FAEBCF442BB6C21F00F737F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FAEBCF462BB6C22000F737F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEBCF492BB6C22000F737F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAEBCF502BB6C2B800F737F0 /* Help!ME.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Help!ME.entitlements"; sourceTree = "<group>"; };
 		FAEBCF562BB6C95700F737F0 /* Homel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homel.swift; sourceTree = "<group>"; };
-		FAEBCF582BB6EACB00F737F0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		FAEBCF5A2BB6FED500F737F0 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		FAEBCF5C2BB7085F00F737F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAEBCF622BB8344200F737F0 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,14 @@
 		FAEBCF412BB6C21F00F737F0 /* Help!ME */ = {
 			isa = PBXGroup;
 			children = (
+				FAEBCF5C2BB7085F00F737F0 /* GoogleService-Info.plist */,
 				FAEBCF502BB6C2B800F737F0 /* Help!ME.entitlements */,
 				FAEBCF422BB6C21F00F737F0 /* Help_MEApp.swift */,
-				FAEBCF442BB6C21F00F737F0 /* ContentView.swift */,
 				FAEBCF462BB6C22000F737F0 /* Assets.xcassets */,
 				FAEBCF482BB6C22000F737F0 /* Preview Content */,
 				FAEBCF562BB6C95700F737F0 /* Homel.swift */,
-				FAEBCF582BB6EACB00F737F0 /* SwiftUIView.swift */,
+				FAEBCF5A2BB6FED500F737F0 /* Login.swift */,
+				FAEBCF622BB8344200F737F0 /* Register.swift */,
 			);
 			path = "Help!ME";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				FAEBCF4A2BB6C22000F737F0 /* Preview Assets.xcassets in Resources */,
 				FAEBCF472BB6C22000F737F0 /* Assets.xcassets in Resources */,
+				FAEBCF5D2BB7085F00F737F0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,9 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEBCF452BB6C21F00F737F0 /* ContentView.swift in Sources */,
 				FAEBCF432BB6C21F00F737F0 /* Help_MEApp.swift in Sources */,
-				FAEBCF592BB6EACB00F737F0 /* SwiftUIView.swift in Sources */,
+				FAEBCF5B2BB6FED500F737F0 /* Login.swift in Sources */,
+				FAEBCF632BB8344200F737F0 /* Register.swift in Sources */,
 				FAEBCF572BB6C95700F737F0 /* Homel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

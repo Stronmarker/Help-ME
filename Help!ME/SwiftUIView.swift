@@ -5,10 +5,6 @@
 //  Created by Alexandre Andres on 29/03/2024.
 //
 
-
-
-// Fonctionnalité à définir, log avec persistences des données. 
-
 import AuthenticationServices
 import SwiftUI
 
@@ -66,7 +62,7 @@ struct SwiftUIView: View {
         
         
         .fullScreenCover(isPresented: $isLoggedIn) {
-            Homel()
+            abcd()
         }
     }
 }

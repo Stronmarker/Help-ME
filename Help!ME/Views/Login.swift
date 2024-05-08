@@ -2,7 +2,7 @@
 //  Home.swift
 //  App
 //
-//  Created by Alexandre Andres-Robert & Gaetan Finiels on 29/03/2024.
+//  Created by Alexandre Andres-Robert on 29/03/2024.
 //
 
 import SwiftUI
@@ -75,10 +75,22 @@ struct Login: View {
                             .background(Color.orange)
                             .foregroundColor(.white)
                             .cornerRadius(10)
-                            .padding(.horizontal)
+                            .padding()
+                            .bold()
+                        
                     }
-                    .padding(.top, 20)
-                    
+                    NavigationLink(destination: Register()) {
+                        Text("S'inscrire")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.orange)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                            .bold()
+                    }
+
+                        
                     
                     SignInWithAppleButton(.continue) { request in
                         request.requestedScopes = [.email, .fullName]
@@ -113,13 +125,14 @@ struct Login: View {
                     .frame(height: 50)
                     .padding()
                     .cornerRadius(8)
+                    .bold()
                     
                     Spacer()
                 }
                 
                 
                 .fullScreenCover(isPresented: $isLoggedIn) {
-                    abcd()
+                    Home()
                 }
                 
             }
